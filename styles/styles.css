@@ -61,7 +61,19 @@ a {
   --background-color: #f4f2f3; /* White background */
   --accent-color: #d05663; /* Red accent color */
   --link-color: #31525b;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.2) ;
+  --lightbulb:#333333;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
+}
+
+.dark-theme {
+  --primary-color: #e58a59;
+  --secondary-color: #94a7ae;
+  --text-color: #f4f2f3;
+  --background-color: #333333;
+  --accent-color: #e58a59;
+  --link-color: #d05663;
+  --lightbulb:white;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
 }
 
 body {
@@ -76,6 +88,7 @@ section {
   min-height: 100vh;
   display: none;
   transition: all 0.4 ease-in-out;
+  padding-bottom: 80px;
 }
 
 .active {
@@ -85,7 +98,7 @@ section {
 }
 @keyframes scaleAnim {
   0% {
-    transform: translateY(-100%) scaleY(0);
+    transform: translateY(-100%) scaleY(0.5);
   }
   100% {
     transform: translateY(0) scaleY(1);
@@ -101,7 +114,7 @@ section {
   width: 100%;
   justify-content: center;
 }
-.controls .control {
+.controls .btn {
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -114,9 +127,9 @@ section {
   box-shadow: var(--box-shadow-1);
   transition: all 0.4s ease-in-out;
 }
-.controls .control i {
-  color: var(--background-color);
+.controls .btn i {
   font-size: 22px;
+  color: var(--background-color);
   transition: all 0.4s ease-in-out;
 }
 .controls .active-btn {
@@ -127,11 +140,16 @@ section {
   color: white;
   transition: all 0.4s ease-in-out;
 }
+.controls .darkSwitch i {
+  transform: scale(1.2);
+  color: var(--lightbulb);
+}
 
 .homegrid {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 80%;
+  min-height: 100vh;
+  margin-bottom: 0px;
 }
 .homegrid .left {
   display: flex;
@@ -153,9 +171,10 @@ section {
 .homegrid .right {
   display: flex;
   position: relative;
+  margin-bottom: 100px;
 }
 .homegrid .right .title {
-  position: absolute;
+  position: flex;
   width: 100%;
   text-align: center;
 }
@@ -175,8 +194,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -246,6 +265,9 @@ ul li h5 {
 }
 
 @media only screen and (min-width: 740px) {
+  section {
+    padding-bottom: 40px;
+  }
   .container {
     padding-left: 70px;
     padding-right: 70px;
@@ -277,6 +299,8 @@ ul li h5 {
   .homegrid {
     grid-template-columns: 1fr 1fr;
     margin-right: 100px;
+    height: 100vh;
+    margin-bottom: 60px;
   }
   .homegrid .left .image {
     max-width: 420px;
@@ -285,7 +309,11 @@ ul li h5 {
     width: 100%;
     height: auto;
   }
+  .homegrid .right {
+    margin-bottom: 0px;
+  }
   .homegrid .right .title {
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: left;
@@ -299,7 +327,7 @@ ul li h5 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .controls .control {
+  .controls .btn {
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -308,7 +336,7 @@ ul li h5 {
     width: 70px;
     height: 70px;
   }
-  .controls .control i {
+  .controls .btn i {
     font-size: 26px;
   }
   .expgrid {
@@ -334,7 +362,7 @@ ul li h5 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .controls .control {
+  .controls .btn {
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -343,7 +371,7 @@ ul li h5 {
     width: 80px;
     height: 80px;
   }
-  .controls .control i {
+  .controls .btn i {
     font-size: 28px;
   }
 }

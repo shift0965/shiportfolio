@@ -2,6 +2,7 @@ const sections = document.querySelectorAll('.section');
 const controls = document.querySelector('.controls');
 const sectBtn = controls.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
+const darkSwitch = document.querySelector('.darkSwitch')
 
 
 function PageTransitions() {
@@ -23,7 +24,14 @@ function PageTransitions() {
     }
 }
 
+let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if(dark){
+    document.body.classList.add("dark-theme")
+}
 
+darkSwitch.addEventListener('click', ()=> {
+    document.body.classList.toggle("dark-theme")
+})
 
 
 PageTransitions();
