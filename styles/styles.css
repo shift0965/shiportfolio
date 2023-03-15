@@ -46,7 +46,7 @@ a {
 }
 
 .imgBox {
-  margin: 10px auto;
+  margin: 20px auto;
   width: 90%;
   max-width: 600px;
 }
@@ -264,6 +264,24 @@ ul li h5 {
   color: var(--primary-color);
 }
 
+table {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #6b675d;
+  font-size: 20px;
+}
+table th {
+  color: var(--accent-color);
+}
+table th, table td {
+  text-align: center;
+  border-top: 1px solid #6b675d;
+  border-left: 1px solid #6b675d;
+  padding: 5px 5px;
+}
+
 @media only screen and (min-width: 740px) {
   section {
     padding-bottom: 40px;
@@ -373,6 +391,9 @@ ul li h5 {
   }
   .controls .btn i {
     font-size: 28px;
+  }
+  table th, table td {
+    padding: 7px 12px;
   }
 }
 @media only screen and (min-width: 1440px) {

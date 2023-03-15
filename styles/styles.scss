@@ -30,6 +30,7 @@ p{
     text-indent: 2em;
 }
 
+
 a{
     color:var(--link-color)
 }
@@ -41,7 +42,7 @@ a{
 }
 
 .imgBox{
-    margin: 10px auto;
+    margin: 20px auto;
     width: 90%;
     max-width: 600px;
     img{
@@ -301,7 +302,23 @@ ul{
     }
 }
 
-
+table{
+    margin-top:20px;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #6b675d;
+    font-size: 20px;
+    th{
+        color: var(--accent-color)
+    }
+    th,td{
+        text-align:center;
+        border-top: 1px solid #6b675d;
+        border-left: 1px solid #6b675d;
+        padding: 5px 5px;
+    }
+}
 
 
 @media only screen and (min-width: 740px) {
@@ -427,6 +444,12 @@ ul{
             i{
                 font-size: 28px;
             }
+        }
+    }
+
+    table{
+        th,td{
+            padding: 7px 12px;
         }
     }
 }
