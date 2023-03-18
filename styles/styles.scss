@@ -117,15 +117,16 @@ section {
     justify-content: center;
 
     .btn{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         cursor: pointer;
         background: var(--secondary-color);
         border-radius: 50%;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        margin: 0px 2%;
+        margin: 0px 1%;
         box-shadow: var(--box-shadow-1);
         transition: all .4s ease-in-out;
         i{
@@ -133,6 +134,24 @@ section {
             color: var(--background-color);
             transition: all .4s ease-in-out;
         }
+    }
+    .label{
+        color:var(--primary-color);
+        position: absolute;
+        right: 30px;
+        //right: -20px;
+        z-index: -1;
+        text-align: right;
+        width: 200px;
+
+        text-shadow: 0px 0px 10px var(--background-color),
+                     0px 0px 15px var(--background-color), 
+                     0px 0px 20px var(--background-color);
+        
+        transform-origin: right;
+        transform: rotate(-90deg);
+        transition: all .2s ease-in-out;
+        opacity: 0;
     }
 
     .active-btn{
@@ -151,6 +170,7 @@ section {
         }
     }
 }
+
 
 
 
@@ -210,7 +230,8 @@ section {
 
 .pagetitle{
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    margin-top:22px;
 }
 
 
@@ -218,7 +239,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -292,7 +313,7 @@ section {
 
 
 ul{
-    margin-top: 24px;
+    margin-top: 10px;
     li{
         margin-bottom: 34px;
         h5{
@@ -397,12 +418,18 @@ table{
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 10px 0px;
-            width: 70px;
-            height: 70px;
+            margin: 8px 0px;
+            width: 60px;
+            height: 60px;
             i{
                 font-size: 26px;
             }
+        }
+        
+        .hover{
+            right: 70px;
+            opacity: 100;
+            transform: rotate(0deg);
         }
     }
 
@@ -438,9 +465,9 @@ table{
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 10px 0px;
-            width: 80px;
-            height: 80px;
+            margin: 8px 0px;
+            width: 70px;
+            height: 70px;
             i{
                 font-size: 28px;
             }

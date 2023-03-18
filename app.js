@@ -2,8 +2,7 @@ const sections = document.querySelectorAll('.section');
 const controls = document.querySelector('.controls');
 const sectBtn = controls.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
-const darkSwitch = document.querySelector('.darkSwitch')
-
+const darkSwitch = document.querySelector('.darkSwitch');
 
 function PageTransitions() {
     for(let i=0; i<sectBtn.length; i++){
@@ -13,6 +12,7 @@ function PageTransitions() {
             this.classList.add("active-btn")
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            
 
             sections.forEach((section) => {
                 section.classList.remove("active");
@@ -30,7 +30,20 @@ if(dark){
 }
 
 darkSwitch.addEventListener('click', ()=> {
-    document.body.classList.toggle("dark-theme")
+    document.body.classList.toggle("dark-theme");
+})
+
+sectBtn.forEach(btn => {
+    btn.addEventListener('mouseover', function(e){
+        if(this == e.target){
+            const label = btn.querySelector(".label");
+            label.classList.add('hover')
+        }
+    })
+    btn.addEventListener('mouseleave', function(){
+        const label = btn.querySelector(".label");
+        label.classList.remove('hover')
+    })
 })
 
 
