@@ -373,7 +373,7 @@ table th, table td {
     font-size: 26px;
   }
   .controls .hover {
-    right: 70px;
+    right: 80px;
     opacity: 100;
     transform: rotate(0deg);
   }

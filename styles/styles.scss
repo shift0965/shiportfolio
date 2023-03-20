@@ -139,7 +139,6 @@ section {
         color:var(--primary-color);
         position: absolute;
         right: 30px;
-        //right: -20px;
         z-index: -1;
         text-align: right;
         width: 200px;
@@ -427,7 +426,7 @@ table{
         }
         
         .hover{
-            right: 70px;
+            right: 80px;
             opacity: 100;
             transform: rotate(0deg);
         }
